@@ -605,5 +605,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 7593618771266784836, guid: 64e6e2a466193cd4d8d8140b0062668d,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7593618771266784836, guid: 64e6e2a466193cd4d8d8140b0062668d,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0.16666667
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64e6e2a466193cd4d8d8140b0062668d, type: 3}
