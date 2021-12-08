@@ -5,11 +5,19 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
+    [Header("General Settings")]
+    [Tooltip("How fast ship moves based on input")]
     [SerializeField] float controlSpeed = 1f;
+    [Tooltip("Ship pitch based on position to keep aim in center of screen")]
     [SerializeField] float pitchOfPositionFactor = 0.33f;
-    [SerializeField] float pitchOfControlFactor = -10f;
-    [SerializeField] float rollFactor = -40f;
+    [Tooltip("Ship sway while moving")]
+    [SerializeField] float pitchOfControlFactor = -20f;
+    [Tooltip("Ship sway while moving")]
+    [SerializeField] float rollFactor = -60f;
+    [Tooltip("Ship yaw based on position to keep aim in center of screen")]
     [SerializeField] float yawOfPositionFactor = -0.33f;
+    [Tooltip("Laser Controls")]
+    [SerializeField] GameObject[] lasers;
 
     float xThrow;
     float yThrow;
@@ -17,6 +25,7 @@ public class PlayerControls : MonoBehaviour
     {
         ProcessTransformation();
         ProcessRotation();
+        ProcessFiring();
     }
 
     void ProcessRotation()
@@ -52,5 +61,27 @@ public class PlayerControls : MonoBehaviour
             yPos,
             transform.localPosition.z
         );
+    }
+
+    void ProcessFiring()
+    {
+        if(Input.GetButton("Fire1"))
+        {
+            SetLasersActive(true);
+        }
+        else
+        {
+            SetLasersActive(false);
+        }
+
+    }
+
+    void SetLasersActive( bool isActive)
+    {
+        foreach(GameObject laser in lasers)
+        {
+            var laserEmission = laser.GetComponent<ParticleSystem>().emission;
+            laserEmission.enabled = isActive;
+        };
     }
 }

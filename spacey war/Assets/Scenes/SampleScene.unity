@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.38366908, g: 0.3955934, b: 0.38088545, a: 1}
+  m_IndirectSpecularColor: {r: 0.38924232, g: 0.40356782, b: 0.39312357, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -325,13 +325,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.029494694, y: 0.13283946, z: 0.15882783, w: 0.97788423}
+  m_LocalRotation: {x: 0.017970825, y: 0.11994138, z: 0.04574965, w: 0.9915635}
   m_LocalPosition: {x: 0, y: 130.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.887, y: 15.617001, z: 18.573}
+  m_LocalEulerAnglesHint: {x: 1.4130001, y: 13.862, z: 5.4550004}
 --- !u!95 &1377635898 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7500299114530434721, guid: 64e6e2a466193cd4d8d8140b0062668d,
@@ -545,6 +545,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2167664631060608988, guid: 64e6e2a466193cd4d8d8140b0062668d,
+        type: 3}
+      propertyPath: rollFactor
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167664631060608988, guid: 64e6e2a466193cd4d8d8140b0062668d,
+        type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167664631060608988, guid: 64e6e2a466193cd4d8d8140b0062668d,
+        type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 7500299113693339805}
+    - target: {fileID: 2167664631060608988, guid: 64e6e2a466193cd4d8d8140b0062668d,
+        type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 7500299113693339804}
+    - target: {fileID: 2167664631060608988, guid: 64e6e2a466193cd4d8d8140b0062668d,
+        type: 3}
+      propertyPath: pitchOfControlFactor
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423336060173892756, guid: 64e6e2a466193cd4d8d8140b0062668d,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7500299114530434722, guid: 64e6e2a466193cd4d8d8140b0062668d,
         type: 3}
       propertyPath: m_RootOrder
@@ -607,3 +637,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64e6e2a466193cd4d8d8140b0062668d, type: 3}
+--- !u!1 &7500299113693339804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2423336060173892753, guid: 64e6e2a466193cd4d8d8140b0062668d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7500299113693339803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7500299113693339805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1155016421720248003, guid: 64e6e2a466193cd4d8d8140b0062668d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7500299113693339803}
+  m_PrefabAsset: {fileID: 0}
