@@ -16,7 +16,9 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float rollFactor = -60f;
     [Tooltip("Ship yaw based on position to keep aim in center of screen")]
     [SerializeField] float yawOfPositionFactor = -0.33f;
-    [Tooltip("Laser Controls")]
+
+    [Header("Lasers Array")]
+    [Tooltip("Add player Lasers here.")]
     [SerializeField] GameObject[] lasers;
 
     float xThrow;
