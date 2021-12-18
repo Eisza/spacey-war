@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
 {
-    void OnTriggerEnter(Collision col) 
+    void OnCollisionEnter(Collision other) 
     {
         Debug.Log("zzzzzzzzzzzzzzzzzzzzzzzz");
     }
 }
+// implement collision
+// log output on collision
