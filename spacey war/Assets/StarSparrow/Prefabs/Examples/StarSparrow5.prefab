@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 23458321744511472}
   - component: {fileID: 4190466116021024904}
   - component: {fileID: 7564930118541402980}
+  - component: {fileID: 1466310442}
+  - component: {fileID: 1466310443}
   m_Layer: 0
   m_Name: StarSparrow5
   m_TagString: Untagged
@@ -112,3 +114,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.613973, y: 5.7641172, z: 10.850532}
   m_Center: {x: -0.2506194, y: -1.4906222, z: 0.0000024011497}
+--- !u!95 &1466310442
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970447681998018}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1466310443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970447681998018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2727565f4ce119343962f1d3f6c8e646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyExplosion: {fileID: 0}
