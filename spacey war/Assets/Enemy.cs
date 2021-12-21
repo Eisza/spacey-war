@@ -6,6 +6,9 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject EnemyExplosion;
     [SerializeField] Transform IARuntime;
+
+    [SerializeField] int killScore = 20;
+    [SerializeField] int health = 3;
     ScoreBoard scoreBoard;
     
     void Start()
@@ -15,17 +18,27 @@ public class Enemy : MonoBehaviour
     
     void OnParticleCollision(GameObject other)
     {
-        ProcessScore();
-        KillEnemy();
+        ProcessHit();
     }
 
-
-    private void ProcessScore()
+    void ProcessHit()
     {
-        scoreBoard.AddScore(25);
+        health -= 1;
+        ProcessScore(1);
+
+        if (health <= 0)
+        {
+            ProcessScore(killScore);
+            KillEnemy();
+        }
     }
 
-    private void KillEnemy()
+    void ProcessScore(int amount)
+    {
+        scoreBoard.AddScore(amount);
+    }
+
+    void KillEnemy()
     {
         GameObject vfx = Instantiate(EnemyExplosion, this.transform.position, Quaternion.identity);
         vfx.transform.parent = IARuntime;
